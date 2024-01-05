@@ -1,1 +1,60 @@
+:root{
+    --main-orange: #ef7f1a;
+    --main-lean: #704CE7;
+    --lightgray: #EBEBEB;
+    --gray: #ddd;
+    --black-muted: #777;
+    --red: #dc3545;
+    --blue: #0d6efd;
+    --green: #28a745;
 
+    --transition: .3s;
+}
+@font-face {
+    font-family: geologica-regular;
+    src: url(../fonts/Geologica-Regular.ttf);
+}
+@font-face {
+    font-family: geologica-semibold;
+    src: url(../fonts//Geologica-SemiBold.ttf);
+}
+@font-face {
+    font-family: geologica-bold;
+    src: url(../fonts//Geologica-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: geologica-regular;
+}
+*::selection{
+    background-color: var(--main-orange);
+    color: #fff
+}
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none
+}
+#courses label{
+    cursor: pointer;
+}
+.anchor{
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+}
+.bold{
+    font-weight: normal;
+    font-family: geologica-bold;
+}
+.semibold{
+    font-weight: normal;
+    font-family: geologica-semibold;
+}
