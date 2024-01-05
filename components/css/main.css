@@ -50,6 +50,12 @@ a{
     left: 50%;
     bottom: 70px;
 }
+.anchor-relative{
+    position: relative;
+    height: 0;
+    width: 0;
+    bottom: 70px;
+}
 .bold{
     font-weight: normal;
     font-family: geologica-bold;
@@ -57,4 +63,10 @@ a{
 .semibold{
     font-weight: normal;
     font-family: geologica-semibold;
+}
+.black{
+    color: #000;
+}
+.title{
+    font-size: 1.9rem;
 }

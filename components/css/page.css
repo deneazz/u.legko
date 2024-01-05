@@ -105,7 +105,7 @@
     color: var(--black-muted);
     display: flex;
     font-size: 1.05rem;
-    transition: var(--transition);
+    transition: color var(--transition);
     padding: 12px 8px;
     margin-left: 6px;
     border-radius: 10px;
@@ -233,7 +233,6 @@
 }
 
 .about-title h1 {
-    font-size: 30px;
     margin-bottom: 6px;
 }
 
@@ -302,10 +301,6 @@
     text-align: center;
 }
 
-.courses-title h1 {
-    font-size: 30px;
-}
-
 .courses-menu {
     width: 100%;
     margin-top: 24px;
@@ -322,8 +317,9 @@
     font-size: 28px;
     text-align: center;
     margin: auto 10px;
-    font-weight: bold;
     cursor: pointer;
+    color: var(--black-muted);
+    transition: var(--transition);
 }
 
 .underline {
@@ -341,9 +337,13 @@
     opacity: 1;
 }
 
-.courses-menu-option:hover .underline {
+/* .courses-menu-option:hover .underline {
     opacity: 1;
+} */
+.courses-menu-option:hover{
+    color: #000;
 }
+
 
 input[name="r"] {
     position: absolute;
@@ -373,6 +373,7 @@ input[name="r"] {
 #schoolers {
     display: flex;
     flex-direction: column;
+    height: min-content;
     gap: 30px
 }
 
@@ -457,28 +458,34 @@ input[name="r"] {
 
 #result {
     width: 100%;
-    height: 690px;
-
-    background-color: rgb(255, 159, 217);
 }
 
 .slider-containter{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-title{
+    margin-bottom: 24px;
 }
 .slider-arrow {
     position: absolute;
     display: flex;
     justify-content: center;
+    align-self: center;
     height: fit-content;
     width: 48px;
     padding: 12px;
     background: transparent;
+    border-radius: 10px;
     border: none;
     font-size: 3rem;
     cursor: pointer;
 }
 
+.slider-arrow:focus-visible{
+    outline: 5px solid #704ce77a;
+}
 .thick-arrow-right, .thick-arrow-left {
     width: 12px;
     height: 12px;
@@ -511,7 +518,6 @@ input[name="r"] {
     padding-block: 16px 32px;
     overflow-x: auto;
     display: flex;
-    align-items: center;
     gap: 8px;
     scroll-snap-type: x mandatory;
     flex-flow: row nowrap;
@@ -536,21 +542,48 @@ input[name="r"] {
 } */
 
 .slider-slide {
+    height: 100%;
     flex: 1 0 30%;
-    aspect-ratio: 1;
     flex-flow: column nowrap;
     margin-right: 8px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #bae;
     scroll-snap-align: center;
+}
+
+.slider-img{
+    width: 100%;
+}
+
+#result figcaption{
+    color: var(--black-muted);
+}
+#result legend{
+    font-size: 1.1rem;
+    color: var(--black-muted);
+    margin-bottom: 12px;
+}
+
+.results{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+}
+
+.results img{
+    width: 100%;
 }
 
 @media (max-width: 600px) {
     .slider-slide {
         flex: 1 0 90%;
     }
+}
+
+.results-title{
+    margin: 36px 0 24px;
 }
 
 #contact {
