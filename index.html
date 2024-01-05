@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="/////">
+    <meta name="description" content="/////">
+    <meta property="og:title" content="/////">
+    <meta name="twitter:title" content="/////">
+    <meta property="og:description" content="/////">
+    <meta property="og:image" content="/////">
+
+    <title>Учимся легко! − Детская развивающая студия</title>
+    <link rel="icon" type="image/png" href="components/img/logo/лого УЧИМСЯ (малый).png">
+
+    <link rel="stylesheet" type="text/css" href="components/css/main.css">
+    <link rel="stylesheet" type="text/css" href="components/css/page.css">
+    <link rel="stylesheet" type="text/css" href="components/css/modal.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <section class="modal hidden">
+            <div class="flex">
+                <button class="btn-close">⨉</button>
+            </div>
+            <div class="modal-title">
+                <h3 class="bold">Записаться на курс</h3>
+                <p>Оставьте заявку и наш оператор вам перезвонит для уточнения данных</p>
+            </div>
+
+            <form id="send-form" action="components/php/sender.php" method="POST">
+                <div class="input-control">
+                    <label for="course">Курс</label>
+                    <select name="course" id="course" title="Курс">
+                        <option hidden selected value="">Выберите курс</option>
+                        <optgroup label="Дошкольники">
+                            <option value="Подготовка к школе для детей 5-6 лет (2 года до школы)">Подготовка к школе
+                                для детей 5-6 лет (2 года до школы)</option>
+                            <option value="Подготовка к школе для детей 6-7 лет (1 год до школы)">Подготовка к школе для
+                                детей 6-7 лет (1 год до школы)</option>
+                        </optgroup>
+                        <optgroup label="Школьники">
+                            <option value="Красивый почерк (Каллиграфия) для детей 6-15 лет">Красивый почерк
+                                (Каллиграфия) для детей 6-15 лет</option>
+                            <option value="Решение задач для детей 1-2 классов">Решение задач для детей 1-2 классов
+                            </option>
+                            <option value="Чтение для детей 6-8 лет">Чтение для детей 6-8 лет</option>
+                            <option value="Таблица умножения для детей 2,3,4 классов">Таблица умножения для детей 2,3,4
+                                классов</option>
+                            <option value="Русский язык для детей 1-5 классов">Русский язык для детей 1-5 классов
+                            </option>
+                        </optgroup>
+                    </select>
+                    <div class="error" id="course-error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="name">Ваше имя</label>
+                    <input type="name" name="name" id="name" placeholder="Оксана" autocomplete="on" maxlength="50" />
+                    <div class="error" id="name-error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="kidName">Имя ребенка</label>
+                    <input type="name" name="kidName" id="kidName" placeholder="Маша" autocomplete="on"
+                        maxlength="50" />
+                    <div class="error" id="kidName-error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="tel">Телефон для связи</label>
+                    <input type="tel" name="tel" id="tel" placeholder="+7 (999) 999-99-99" autocomplete="on"
+                        maxlength="12" />
+                    <div class="error" id="tel-error"></div>
+                </div>
+                <button type="submit" class="btn btn-send">Отправить</button>
+            </form>
+
+        </section>
+
+        <div class="overlay hidden"></div>
+
+        <div id="header">
+            <div class="container">
+                <div class="cont-header">
+                    <div id="header-cont">
+                        <p id="schedule">Пн-Вс: 10:00 - 20:00</p>
+                        <p class="phone-number"><a href="tel:+79524150721">+7 (952) 415-07-21</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header-sticky">
+            <div class="container">
+                <div class="cont-header">
+                    <div id="header-sticky-cont">
+                        <div class="header-sticky-cont2">
+                            <div class="header-btn-cont logo-cont">
+                                <img src="components/img/logo/лого УЧИМСЯ.png" alt="Учимся легко!" id="logo">
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="https://vk.com/n.legko.novoch" title="Мы в Вконтакте" class="header-btn-icon"
+                                    id="header-btn-icon-first">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        style="fill: #fff;">
+                                        <path
+                                            d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.513-.743.675-1.021.675-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752.324 0 .882.164 2.183 1.417 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931-.197-.615-.907-1.51-1.849-2.569-.512-.604-1.277-1.254-1.51-1.579-.325-.419-.231-.604 0-.976.001.001 2.672-3.761 2.95-5.04z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="https://www.instagram.com/uch_legko?igshid=YTQwZjQ0NmI0OA=="
+                                    title="Мы в Instagram" class="header-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        style="fill: #fff;">
+                                        <path
+                                            d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z">
+                                        </path>
+                                        <circle cx="11.994" cy="11.979" r="3.003"></circle>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="https://api.whatsapp.com/send?phone=89524150721" title="Мы в WhatsApp"
+                                    class="header-btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        style="fill: #fff;">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-sticky-cont2">
+                            <div class="header-btn-cont">
+                                <a href="#about-us" class="header-btn">О Нас</a>
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="#directions" class="header-btn">Направления</a>
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="#results" class="header-btn">Результаты</a>
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="#contacts" class="header-btn">Контакты</a>
+                            </div>
+                            <div class="header-btn-cont">
+                                <a href="#sales" class="header-btn">Акции</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section id="cover">
+                <div class="container-cover">
+                    <div class="cont-cover">
+                        <div class="cover-cont">
+                            <!-- удаленный вариант обложки -->
+                            <!-- <div class="cover-content">
+                                    <h1 id="cover-main-text">"Учимся легко!" &#8211; детская развивающая студия</h1>
+                                    <h2 id="cover-side-text">Развивающие занятия для дошкольников и школьников в мини-группах</h2>
+                                    <button id="cover-btn" class="btn">Записаться</button>
+                                </div> -->
+                            <img type="image/png" src="components/img/cover/cover_small.png" id="cover-img"
+                                alt='"Учимся легко!" &#8211; детская развивающая студия'>
+                            <a name="about-us" class="anchor"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="container">
+                    <div class="cont">
+                        <div class="about-cont">
+                            <div class="about-title">
+                                <h1 class="bold">Любовь к делу, уважение и ориентированность на результат</h1>
+                                <h2 class="bold">– главные ценности нашей детской развивающей студии «Учимся легко!»
+                                    <nobr class="bold">г. Новочеркасск.</nobr>
+                                </h2>
+                            </div>
+                            <div class="about-content">
+                                <div>
+                                    <p>Мы созданы для того, чтобы помочь детям стать успешными и преодолеть трудности
+                                        школьного обучения. Поэтому в нашей студии есть направления для устранения
+                                        пробелов в учёбе и направления, которые помогают создать хорошую базу для
+                                        успешного обучения в школе, позволяют избежать школьных трудностей.
+                                    </p>
+                                    <p>Мы обязательно приведем Вашего ребёнка к успеху! Каждый ребёнок может хорошо
+                                        учиться.
+                                        Задача взрослых – помочь ему стать успешным.
+                                    </p>
+                                </div>
+
+                                <div class="about-dirs">
+                                    <p class="bold">Наши самые актуальные направления</p>
+                                    <ul>
+                                        <li>Подготовка к школе ( 2 года до школы и 1 год до школы)</li>
+                                        <li>Красивый почерк (Каллиграфия) (1-9 классы)</li>
+                                        <li>Обучение чтению (6-8 лет)</li>
+                                        <li>Русский язык (1-5 классы)</li>
+                                        <li>Таблица умножения (2 -4 классы)</li>
+                                        <li>Решение задач (1-2 классы)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a name="directions" class="anchor"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses">
+                <div class="container">
+                    <div class="cont">
+                        <div class="courses-cont">
+                            <div class="courses-title">
+                                <h1 class="bold">Наши направления</h1>
+                            </div>
+                            <div class="courses-menu">
+                                <div class="courses-menu-cont">
+                                    <div class="courses-menu-option">
+                                        <label for="r1" id="courses-menu-option1" class="semibold">Дошкольники</label>
+                                        <span id="underline1" class="underline"></span>
+                                    </div>
+                                    <div class="courses-menu-option">
+                                        <label for="r2" id="courses-menu-option2" class="semibold">Школьники</label>
+                                        <span id="underline2" class="underline"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="courses-cards">
+                                <input type="radio" name="r" id="r1" checked>
+                                <input type="radio" name="r" id="r2">
+                                <div id="preschoolers" class="courses-cards-cont s1">
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/preschoolers/2.png" alt=""
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Подготовка к школе</h1>
+                                                <p class="semibold">для детей 5-6 лет (2 годa до школы)</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>Пройдя курс подготовки, ребёнок будет знать все буквы, писать их,
+                                                    читать по слогам, знать цифры, числовой ряд, считать в прямом и
+                                                    обратном порядке до 10, знать соседей числа, следующее и предыдущее
+                                                    число, разовьёт свой кругозор, станет внимательным, научиться
+                                                    слушать и правильно выполнять задания, разовьёт графические навыки,
+                                                    память, мышление, научится правильно держать карандаш и ручку. И
+                                                    будет готов перейти на следующую ступень «1 год до школы».</p>
+                                                <p>В подготовку входит:</p>
+                                                <ul>
+                                                    <li>изучение букв и обучение чтению по слогам</li>
+                                                    <li>развитие речи, кругозора</li>
+                                                    <li>математика</li>
+                                                    <li>постановка руки, написание букв и цифр</li>
+                                                    <li>развитие внимания, памяти, самоконтроля</li>
+                                                </ul>
+                                                <p>Продолжительность курса – 2 р. в неделю по 1ч</p>
+                                                <p>Стоимость – 4200р/7 зан/мес</p>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/preschoolers/1.png" alt=""
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Подготовка к школе</h1>
+                                                <p class="semibold">для детей 6-7 лет (1 год до школы)</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>Пройдя курс подготовки к школе в нашей образовательной студии, дети
+                                                    умеют хорошо читать со скоростью 30-50 слов в минуту, записывать
+                                                    слова без пропусков и замен букв, владеют устным счётом, графическим
+                                                    диктантом, ориентируются в строке и в клетке, умеют правильно
+                                                    держать ручку , красиво писать цифры и буквы, становятся более
+                                                    внимательными, расширяют словарный запас и представление о мире.</p>
+                                                <p>В подготовку входит:</p>
+                                                <ul>
+                                                    <li>обучение чтению</li>
+                                                    <li>обучение грамоте (запись слов на слух без пропусков букв,
+                                                        звуковой анализ)</li>
+                                                    <li>развитие речи, кругозора</li>
+                                                    <li>математика</li>
+                                                    <li>каллиграфия цифр и печатных букв</li>
+                                                    <li>развитие внимания, памяти, самоконтроля</li>
+                                                </ul>
+                                                <p>Продолжительность курса – 3 р. в неделю по 1ч 45 мин</p>
+                                                <p>Стоимость – 7000р/10 зан/мес</p>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="schoolers" class="courses-cards-cont">
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/schoolers/1.png" alt="Красивый почерк"
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Красивый почерк (Каллиграфия)</h1>
+                                                <p class="semibold">для детей 6-15 лет</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>Первое, чем мы займемся - это поставим правильно пальцы и руку,
+                                                    закрепим новое положение руки. От положения пальчиков зависит
+                                                    половина успеха. Затем мы выучим правила красивого письма и займемся
+                                                    практикой.</p>
+                                                <p>Мы пишем и карандашом, и пером, и перьевой ручкой, и шариковой
+                                                    ручкой, чтобы сформировать и закрепить правильные движения руки. В
+                                                    группе 4-5 человек. Все дети после курса могут писать красиво.</p>
+                                                <p>Заниматься нужно не менее 2-х раз в неделю + 2 домашних задания,
+                                                    которые обязательно нужно выполнить качественно. Если задание
+                                                    выполнено некачественно, мы переделываем на уроке и доводим до
+                                                    отличного результата. Только после этого двигаемся дальше. Поэтому
+                                                    невыполненное или некачественно выполненное д/з, к сожалению,
+                                                    отодвигает окончание курса, количество занятий увеличивается.</p>
+                                                <p>Все строчные буквы можно освоить за 3-4 месяца, тем самым
+                                                    сформировать красивый почерк. А потом, по желанию, можно еще освоить
+                                                    и заглавные буквы, и цифры, и еще попрактиковаться в красивом
+                                                    письме.</p>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/schoolers/2.png" alt=""
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Решение задач</h1>
+                                                <p class="semibold">для детей 1-2 классов</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>Задача: «В одном рулоне 3 метра ткани, в другом — 4 метра. На сколько
+                                                    больше во втором рулоне?»</p>
+                                                <p>Почему у детей возникают сложности с решением такой задачи?</p>
+                                                <p>Одна из возможных причин — ребенок просто не понимает, что означает
+                                                    слово «рулон». Другая — он прочел условие задачи, не замечая знаков
+                                                    препинания и не делая пауз:
+                                                    «три-метра-ткани-в-другом-четыре-метра-на-сколько». Из-за этого
+                                                    текст задачи превратился в непонятный набор слов. Третья — увидев
+                                                    цифры 3 и 4, ученик автоматически начал их складывать (забегая
+                                                    вперед скажем — из-за того, что не научен классифицировать вопросы).
+                                                </p>
+                                                <p>И это только начало. Для взрослых смысл выражений «Сколько всего»,
+                                                    «Сколько осталось», «После того как», «Столько сколько», «Из них…»
+                                                    абсолютно понятен, и не всем учителям даже приходит в голову, что
+                                                    они нуждаются в пояснении. А дети нечасто употребляют эти
+                                                    словосочетания в обычной жизни, могут не понимать их, даже учась в
+                                                    школе, и из-за этого им трудно решать задачи.</p>
+                                                <p>Отдельная тема — это союзы и союзные слова в условии; анализ вопроса,
+                                                    от которого зависит выбор действия и определение типа задачи; другие
+                                                    нюансы, от которых зависит понимание ребенком самой задачи.</p>
+                                                <p>«При отсутствии навыков работы над смыслом, условием задачи, ребенок
+                                                    не может успешно решать задачи, — говорит автор курса Ольга
+                                                    Васильевна Лысенко. — Когда отсутствует осмысленность, применить
+                                                    правильный способ невозможно. Поэтому некоторые дети бездумно
+                                                    перебирают все известные математические действия, используя заданные
+                                                    числовые данные.</p>
+                                                <p>Мы искали эффективное решение этих проблем в течение нескольких лет.
+                                                    Не обнаружив их ни в одной известной методике, мы сами разработали
+                                                    набор упражнений на основе лингвистического анализа. Эти методы
+                                                    доступны для понимания любому ребенку, значительно облегчают
+                                                    понимание текста задачи и выбор правильного решения».</p>
+                                                <p>Ваш ребёнок сможет:</p>
+                                                <ul>
+                                                    <li>правильно читать задачу и понимать её смысл</li>
+                                                    <li>отделять условие от вопроса</li>
+                                                    <li>выделять ключевые слова в условии и вопросе</li>
+                                                    <li>делать краткую запись и схему</li>
+                                                    <li>осмысленно подбирать правильный способ решения задачи</li>
+                                                    <li>записывать ответ</li>
+                                                    <li>составлять задачи, обратные данной</li>
+                                                </ul>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/schoolers/3.png" alt=""
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Чтение</h1>
+                                                <p class="semibold">для детей 6-8 лет</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>Курс предназначен для детей:</p>
+                                                <ul>
+                                                    <li>старшего дошкольного возраста, которые знают все буквы</li>
+                                                    <li>1 класса, которые плохо читают</li>
+                                                </ul>
+                                                <p>Итоги курса:</p>
+                                                <ul>
+                                                    <li>Ребёнок начинает читать на 2-3 занятии</li>
+                                                    <li>Ребёнок умеет читать, применяя все правила чтения (слияние букв
+                                                        в слоги, постановка ударения, чтение с буквами е, ё, ю, я, й, ь,
+                                                        стечение согласных и др.)</li>
+                                                    <li>Ребёнок может читать простые тексты, не разделённые на слоги
+                                                    </li>
+                                                    <li>Ребёнок готов перейти на следующий уровень «Техника чтения»</li>
+                                                </ul>
+                                                <p>Продолжительность курса – 15 занятий по 75 мин</p>
+                                                <p>Стоимость – 11000 руб ( 5500р\мес)</p>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/schoolers/4.png" alt=""
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Таблица умножения</h1>
+                                                <p class="semibold">для детей 2,3,4 классов</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>После прохождения курса ребенок выучит все случаи умножения и
+                                                    деления.</p>
+                                                <p>Таблица умножения — это 180 случаев на умножение и 180 случаев на
+                                                    деление. Полагаться только на память — рискованно. Ребенок учит
+                                                    таблицу, и все равно во время контрольной испытывает стресс и
+                                                    забывает некоторые случаи. </p>
+                                                <p>Как же этого избежать?</p>
+                                                <p>Наш курс — это не только опора на память, это эффективные приемы
+                                                    быстрых расчетов, знание которых выручит в любую минуту.</p>
+                                                <p>Например, умножение на «6» — самое лёгкое в таблице умножения. Вы
+                                                    возразите, что это не так, но мы ломаем стереотипы.</p>
+                                                <p>Судите сами, при умножении «шестерки» на четное число, достаточно в
+                                                    ответе сначала записать половину второго множителя, а затем и сам
+                                                    множитель.</p>
+                                                <p>Например,<br>
+                                                    6*2=12 — пишем половину от двух, а затем и само число.<br>
+                                                    6*4=24<br>
+                                                    6*6=36 и т.д.<br>
+                                                    И таких закономерностей — масса.</p>
+                                                <p>Чем дальше учим, тем легче запоминать.</p>
+                                                <p>Продолжительность курса - 2 раза в неделю.<br>
+                                                    Для 2 класса - 15 занятий по 75 мин. Стоимость 9000р.<br>
+                                                    Для 3, 4 класса - 10 занятий по 75 мин. Стоимость 6000р. </p>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="courses-card">
+                                        <div class="courses-card-content1">
+                                            <img src="components/img/courses/schoolers/5.png" alt=""
+                                                class="courses-img">
+                                        </div>
+                                        <div class="courses-card-content2">
+                                            <div class="courses-card-title">
+                                                <h1 class="bold">Русский язык</h1>
+                                                <p class="semibold">для детей 1-5 классов</p>
+                                            </div>
+                                            <div class="courses-card-text">
+                                                <p>Мы учимся писать по алгоритму правильного письма, с проговариванием и
+                                                    самопроверкой, развиваем орфографическую зоркость, закрываем пробелы
+                                                    в знаниях, учим и запоминаем правила русского языка, делаем
+                                                    упражнения для внимания и памяти. </p>
+                                                <p>Ребята становятся более грамотными, разбираются в орфограммах,
+                                                    допускают всё меньше и меньше ошибок или уже совсем их не допускают,
+                                                    у них повышается интерес к предмету, улучшаются оценки.</p>
+                                                <p>Продолжительность курса – 2 раза в неделю</p>
+                                                <p>Стоимость – 4200р/мес</p>
+                                            </div>
+                                            <button class="courses-btn btn btn-modal">Записаться на бесплатную
+                                                диагностику</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a name="results" class="anchor"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="result">
+                <div class="container">
+                    <div class="cont">
+                        <div class="review-cont">
+                            <div class="slider-containter">
+                                <div class="slider" dir="ltr">
+                                    <button class="slider-arrow slider-arrow--prev" onclick="handlesliderMove(false)">
+                                        <div class="thick-arrow-left"></div>
+                                    </button>
+
+                                    <button class="slider-arrow slider-arrow--next" onclick="handlesliderMove()">
+                                        <div class="thick-arrow-right"></div>
+                                    </button>
+                                    <div class="slider-slide">1</div>
+                                    <div class="slider-slide">2</div>
+                                    <div class="slider-slide">3</div>
+                                    <div class="slider-slide">4</div>
+                                    <div class="slider-slide">5</div>
+                                    <div class="slider-slide">6</div>
+                                    <div class="slider-slide">7</div>
+                                    <div class="slider-slide">8</div>
+                                </div>
+                            </div>
+
+
+                            <a name="contacts" class="anchor"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <div class="cont">
+                        <div class="contact-cont">
+                            <div class="contact-content">
+                                <div class="contact-map">
+                                    <iframe
+                                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A1b97c5689a78b9ff6c717ea32294f53e0c2dd1a5e583e63debb138558bfac737&amp;source=constructor"
+                                        width="600" height="500" frameborder="0"></iframe>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-info-cart">
+                                        <h1 class="bold" style="font-size: 30px;">Наши контакты</h1>
+                                    </div>
+                                    <div class="contact-info-cart">
+                                        <div class="contact-info-title">
+                                            <h1>Адрес</h1>
+                                        </div>
+                                        <div class="contact-info-content">
+                                            <p>Новочеркасск, пер. Кривопустенко, 14, офис 14</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-info-cart">
+                                        <div class="contact-info-title">
+                                            <h1>График работы</h1>
+                                        </div>
+                                        <div class="contact-info-content">
+                                            <p>Пн-Вс: 10:00 - 20:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-info-cart">
+                                        <div class="contact-info-title">
+                                            <h1>Телефон</h1>
+                                        </div>
+                                        <div class="contact-info-content">
+                                            <p class="phone-number"><a href="tel:+79524150721">+7 (952) 415-07-21</a>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-info-cart">
+                                        <div class="contact-info-title">
+                                            <h1>Наши Соцсети</h1>
+                                        </div>
+                                        <div class="contact-btns-cont contact-info-content">
+                                            <div class="contact-btn-cont">
+                                                <a href="https://vk.com/n.legko.novoch" title="Мы в Вконтакте"
+                                                    class="contact-btn-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" style="fill: #fff;">
+                                                        <path
+                                                            d="M21.579 6.855c.14-.465 0-.806-.662-.806h-2.193c-.558 0-.813.295-.953.619 0 0-1.115 2.719-2.695 4.482-.51.513-.743.675-1.021.675-.139 0-.341-.162-.341-.627V6.855c0-.558-.161-.806-.626-.806H9.642c-.348 0-.558.258-.558.504 0 .528.79.65.871 2.138v3.228c0 .707-.127.836-.407.836-.743 0-2.551-2.729-3.624-5.853-.209-.607-.42-.852-.98-.852H2.752c-.627 0-.752.295-.752.619 0 .582.743 3.462 3.461 7.271 1.812 2.601 4.363 4.011 6.687 4.011 1.393 0 1.565-.313 1.565-.853v-1.966c0-.626.133-.752.574-.752.324 0 .882.164 2.183 1.417 1.486 1.486 1.732 2.153 2.567 2.153h2.192c.626 0 .939-.313.759-.931-.197-.615-.907-1.51-1.849-2.569-.512-.604-1.277-1.254-1.51-1.579-.325-.419-.231-.604 0-.976.001.001 2.672-3.761 2.95-5.04z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="contact-btn-cont">
+                                                <a href="https://www.instagram.com/uch_legko?igshid=YTQwZjQ0NmI0OA=="
+                                                    title="Мы в Instagram" class="contact-btn-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" style="fill: #fff;">
+                                                        <path
+                                                            d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z">
+                                                        </path>
+                                                        <circle cx="11.994" cy="11.979" r="3.003"></circle>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="contact-btn-cont">
+                                                <a href="https://api.whatsapp.com/send?phone=89524150721"
+                                                    title="Мы в WhatsApp" class="contact-btn-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24" style="fill: #fff;">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-info-cart">
+                                        <div class="contact-info-content">
+                                            <button class="btn contact-btn btn-modal">Запишитесь онлайн</button>
+                                            <p id="or">или</p>
+                                            <button class="btn contact-btn"><a
+                                                    href="https://api.whatsapp.com/send?phone=89524150721">Напишите нам
+                                                    в WhatsApp</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sale">
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+
+    <script src="components/js/courses-toggle&slider.js"></script>
+    <script src="components/js/modal.js"></script>
+    <script src="components/js/send.js"></script>
+</body>
+
+</html>
