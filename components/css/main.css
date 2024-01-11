@@ -1,9 +1,14 @@
 :root{
-    --main-orange: #ef7f1a;
+    --main-orange: #ed7308;
+    --orange: #ff8600;
+    --light-orange: #ffb900;
+    --main-yellow: #ffee00;
     --main-lean: #704CE7;
     --lightgray: #EBEBEB;
     --gray: #ddd;
+    --white-warm: #F9F9F9;
     --black-muted: #777;
+    --black-warm: #333333;
     --red: #dc3545;
     --blue: #0d6efd;
     --green: #28a745;
@@ -28,10 +33,6 @@
     border: 0;
     font-family: geologica-regular;
 }
-*::selection{
-    background-color: var(--main-orange);
-    color: #fff
-}
 html{
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -42,19 +43,22 @@ body{
 a{
     text-decoration: none
 }
+p{
+    color: var(--black-warm)
+}
 #courses label{
     cursor: pointer;
 }
 .anchor{
     position: absolute;
     left: 50%;
-    bottom: 70px;
+    bottom: 69px;
 }
 .anchor-relative{
     position: relative;
     height: 0;
     width: 0;
-    bottom: 70px;
+    bottom: 69px;
 }
 .bold{
     font-weight: normal;
@@ -69,4 +73,10 @@ a{
 }
 .title{
     font-size: 1.9rem;
+}
+.flex{
+    display: flex;
+}
+.focus:focus-visible{
+    outline: 5px solid #704ce77a;
 }

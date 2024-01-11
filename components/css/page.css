@@ -33,7 +33,7 @@
 #header {
     height: 58px;
     font-size: 20px;
-
+    background-color: #fff;
     /* background-color: orange; */
 }
 
@@ -50,24 +50,30 @@
     /* background-color: orangered; */
     display: flex;
     align-items: center;
+    background-color: var(--main-orange);
+    border-radius: 5px;
+    padding: 4px 6px;
+    transition: var(--transition);
+}
+.phone-number:hover{
+    background-color: var(--main-lean);
+}
+.phone-number-transperent{
+    background-color: transparent;
+    padding: 0;
+}
+.phone-number-transperent:hover{
+    background-color: transparent;
 }
 
 .phone-number>a {
-    color: inherit;
-}
-
-.phone-number>a:focus-visible {
-    outline: 5px solid #704ce77a;
+    color: #fff;
 }
 
 #schedule {
     /* background-color: orangered; */
     display: flex;
     align-items: center;
-}
-
-#phone-number>a {
-    color: #000;
 }
 
 #header-sticky {
@@ -102,7 +108,7 @@
 }
 
 .header-btn {
-    color: var(--black-muted);
+    color: var(--black-warm);
     display: flex;
     font-size: 1.05rem;
     transition: color var(--transition);
@@ -117,10 +123,6 @@
 
 .header-btn:active {
     transform: scale(0.95);
-}
-
-.header-btn:focus-visible {
-    outline: 5px solid #704ce77a;
 }
 
 .logo-cont {
@@ -150,10 +152,6 @@
     background-color: var(--main-lean);
 }
 
-.header-btn-icon:focus-visible,
-.contact-btn-icon:focus-visible {
-    outline: 5px solid #704ce77a;
-}
 
 #header-btn-icon-first {
     margin-left: 24px;
@@ -170,8 +168,6 @@
     height: 100%;
     position: relative;
     margin: 0 auto;
-
-    /* background-color: rgb(255, 119, 0); */
 }
 
 .cont-cover {
@@ -186,6 +182,7 @@
 
 #cover-img {
     width: 100%;
+    user-select: none;
 }
 
 /* стили для удаленной обложки 
@@ -217,6 +214,7 @@
 
 #about {
     width: 100%;
+    margin-top: -10px;
     /* height: 690px; */
 
     /* background-color: rgb(0, 179, 255); */
@@ -229,15 +227,25 @@
 
 .about-title {
     width: 100%;
-    text-align: center;
+    text-align: left;
+}
+.about-svg{
+    width: 300px;
+    position: absolute;
+    bottom: -60px;
+    right: 0;
 }
 
 .about-title h1 {
     margin-bottom: 6px;
 }
+.about-title h2 {
+    margin-bottom: 24px;
+    font-weight: normal;
+}
+
 
 .about-content {
-    padding-top: 36px;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -275,7 +283,7 @@
     margin-left: 24px;
 }
 
-.about-dirs p {
+.about-dirs h1{
     font-size: 1.2rem;
 }
 
@@ -289,6 +297,22 @@
     /* 
     background-color: rgb(0, 255, 76); */
 }
+
+.courses-header-cont{
+    background: var(--orange);
+    /* background: linear-gradient(45deg, var(--main-orange) 0%, var(--orange) 100%); */
+}
+#visual{
+    width: 100%;
+    fill: var(--orange);
+    margin-bottom: -30px;
+}
+#visual2{
+    width: 100%;
+    fill: #ffb200;
+    margin-top: -6px;
+}
+
 
 .courses-cont {
     height: 100%;
@@ -308,7 +332,7 @@
 
 .courses-menu-cont {
     text-align: center;
-    margin-bottom: 37px;
+    margin-bottom: 24px;
 }
 
 .courses-menu-option {
@@ -318,7 +342,7 @@
     text-align: center;
     margin: auto 10px;
     cursor: pointer;
-    color: var(--black-muted);
+    color: #814400;
     transition: var(--transition);
 }
 
@@ -408,20 +432,26 @@ input[name="r"] {
 }
 
 .courses-card-content2 li {
-    margin-top: 6px;
+    margin-top: 4px;
     margin-left: 16px;
 }
 
+.courses-btns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 .courses-btn {
     width: fit-content;
-    background-color: var(--main-orange);
+    background: var(--main-orange);
+    /* background: linear-gradient(45deg, var(--main-orange) 0%, var(--orange) 100%); */
     color: #fff;
-    margin-top: 12px;
+    margin-top: 6px;
     transition: background-color var(--transition), transform var(--transition);
 }
 
 .courses-btn:hover {
-    background-color: var(--main-lean);
+    background: var(--main-lean);
 }
 
 .courses-btn:active,
@@ -429,14 +459,13 @@ input[name="r"] {
     transform: scale(0.95);
 }
 
-.courses-btn:focus-visible,
-.contact-btn:focus-visible {
-    outline: 5px solid #704ce77a;
-}
-
 .courses-card-title {
     font-size: 1rem;
     margin-bottom: 12px;
+    background: var(--light-orange);
+    background: linear-gradient(45deg, var(--light-orange) 0%, var(--main-yellow) 100%);
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
 }
 
 .courses-card-title>p {
@@ -449,12 +478,22 @@ input[name="r"] {
 }
 
 .courses-card-text p {
-    margin-top: 8px;
+    margin-top: 6px;
 }
-
-.courses-card-text p:first-child {
+.duration{
+    margin-top: 12px;
+}
+.duration > p{
+    margin-top: 4px;
+}
+.duration > p:first-child{
     margin-top: 0;
 }
+
+.courses-card-text > p:first-child {
+    margin-top: 0;
+}
+
 
 #result {
     width: 100%;
@@ -483,9 +522,6 @@ input[name="r"] {
     cursor: pointer;
 }
 
-.slider-arrow:focus-visible{
-    outline: 5px solid #704ce77a;
-}
 .thick-arrow-right, .thick-arrow-left {
     width: 12px;
     height: 12px;
@@ -505,6 +541,29 @@ input[name="r"] {
    border-color: black;
 }
 
+.hidden-content{
+    display:block;
+    transition: var(--transition);
+}
+.hidden{
+    display: none;
+}
+.more{
+    display: flex;
+    margin-top: 4px;
+    cursor: pointer;
+    fill: var(--black-muted)
+}
+.more > p{
+    margin-top: 0;
+    line-height: 24px;
+    color: var(--black-muted);
+}
+.more > p:hover{
+    text-decoration: underline;
+}
+
+
 .slider-arrow--prev {
     left: 0;
 }
@@ -515,10 +574,10 @@ input[name="r"] {
 
 .slider {
     width: 95%;
-    padding-block: 16px 32px;
+    padding-bottom: 32px;
     overflow-x: auto;
     display: flex;
-    gap: 8px;
+    gap: 24px;
     scroll-snap-type: x mandatory;
     flex-flow: row nowrap;
     scroll-behavior: smooth;
@@ -545,16 +604,57 @@ input[name="r"] {
     height: 100%;
     flex: 1 0 30%;
     flex-flow: column nowrap;
-    margin-right: 8px;
     display: flex;
+    position: relative;
     justify-content: flex-start;
     align-items: center;
     scroll-snap-align: center;
 }
 
 .slider-img{
-    width: 100%;
+    width: calc(100% - 10px);
+    border: 5px solid var(--main-orange);
+    border-radius: 5px;
 }
+
+.slider-svg-preset1 > .slider-svg1{
+    position: absolute;
+    width: 20%;
+    left: 0;
+    top: 0;
+}
+.slider-svg-preset1 > .slider-svg2{
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+}
+.slider-svg-preset1 > .slider-svg3{
+    position: absolute;
+    width: 20%;
+    right: 0;
+    bottom: 3px;
+}
+
+.slider-svg-preset2 > .slider-svg1{
+    position: absolute;
+    width: 20%;
+    left: 0;
+    top: 0;
+}
+.slider-svg-preset2 > .slider-svg2{
+    position: absolute;
+    width: 50%;
+    bottom: 5px;
+    right: 1px;
+}
+.slider-svg-preset2 > .slider-svg3{
+    position: absolute;
+    width: 20%;
+    right: 0;
+    top: 0;
+}
+
 
 #result figcaption{
     color: var(--black-muted);
@@ -567,13 +667,14 @@ input[name="r"] {
 
 .results{
     display: grid;
-    gap: 16px;
+    gap: 32px;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
 }
-
 .results img{
     width: 100%;
+    border: 5px solid var(--main-orange);
+    border-radius: 5px;
 }
 
 @media (max-width: 600px) {
@@ -602,6 +703,9 @@ input[name="r"] {
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 30px;
+    padding: 2rem;
+    border: 2px solid var(--black-muted);
+    border-radius: 25px;
 }
 
 .contact-btns-cont {
@@ -667,6 +771,64 @@ input[name="r"] {
 }
 
 
+footer{
+    background-color: var(--white-warm);
+}
+.footer-cont{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap:32px;
+}
+.footer-card{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    /* background-color: brown; */
+    flex: 1 0 200px;
+}
+.footer-card-logo img{
+    width: clamp(100px, 100%, 250px);
+}
+.footer-card-logo a{
+    color: var(--black-muted);
+    transition: color var(--transition);
+}
+.footer-card-logo a:hover{
+    color: #000;
+}
+.footer-card-qrs .flex{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+.footer-card-navbar ul{
+    list-style-type: none;
+}
+.footer-card-navbar li a{
+    color: var(--black-muted);
+    padding: 0.7rem 1rem;
+    transition: color var(--transition);
+}
+.footer-card-navbar li a:hover{
+    color: #000;
+}
+.footer-card-qrs img{
+    aspect-ratio: 1;
+    width: clamp(100px, calc(50% - 8px), 130px);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.politic{
+    margin-top: 4px;
+}
 
 
 
