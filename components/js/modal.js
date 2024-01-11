@@ -5,8 +5,8 @@ const closeModalBtn = document.querySelector(".btn-close");
 
 // close modal function
 const closeModal = function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
+  modal.classList.add("hidden-modal");
+  overlay.classList.add("hidden-modal");
 };
 
 // close the modal when the close button and overlay is clicked
@@ -15,15 +15,15 @@ overlay.addEventListener("click", closeModal);
 
 // close modal when the Esc key is pressed
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden-modal")) {
     closeModal();
   }
 });
 
 // open modal function
 const openModal = function () {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+  modal.classList.remove("hidden-modal");
+  overlay.classList.remove("hidden-modal");
 };
 // open modal event
 for(i=0;i<openModalBtn.length;i++){
