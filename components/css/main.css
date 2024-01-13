@@ -80,3 +80,7 @@ p{
 .focus:focus-visible{
     outline: 5px solid #704ce77a;
 }
+.imp{
+    font-size: 1.1em;
+    color: var(--main-orange)
+}

@@ -97,6 +97,39 @@
     z-index: 3;
 }
 
+/* далее стили для модалки "акции" */
+
+.header-btn-cont-sales{
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 24px;
+}
+.modal-sales{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    bottom: -280%;
+    left: -90%;
+    width: 260px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: opacity var(--transition) ease-in-out;
+    cursor: auto;
+}
+
 .hidden-modal{
     display: none;
+}
+.vis-modal-opacity{
+    display: block;
+    opacity: 1;
+}
+.hidden-modal-opacity{
+    display: none;
+    opacity: 0;
 }
