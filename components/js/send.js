@@ -1,19 +1,24 @@
 var form = document.querySelector("#send-form");
 form.addEventListener("submit", validate);
 
+var course = form.course.value;
+var name = form.name.value;
+var kidName = form.kidName.value;
+var tel = form.tel.value;
+
 
 function validate(e){
     e.preventDefault();
-
-    var course = form.course.value;
-    var name = form.name.value;
-    var kidName = form.kidName.value;
-    var tel = form.tel.value;
 
     var courseError = document.querySelector("#course-error");
     var nameError = document.querySelector("#name-error");
     var kidNameError = document.querySelector("#kidName-error");
     var telError = document.querySelector("#tel-error");
+
+    var course = form.course.value;
+    var name = form.name.value;
+    var kidName = form.kidName.value;
+    var tel = form.tel.value;
 
     courseError.innerHTML = "";
     nameError.innerHTML = "";
@@ -120,23 +125,35 @@ window.onload = function() {
 function send(){
     alert("валидация пройдена!");
     
-    // var formData = new FormData(this);
+    const params = {
+        course: course,
+        name: name,
+        kidName: kidName,
+        tel: tel
+    }
 
-    // // Отправляем данные на сервер с помощью AJAX
-    // var xhr = new XMLHttpRequest();
-    // xhr.open("POST", "../php/sender.php"); // Укажите путь к файлу обработчику на сервере
-    // xhr.onreadystatechange = function() {
-    //   if (xhr.readyState === XMLHttpRequest.DONE) {
-    //     if (xhr.status === 200) {
-    //       // Успешно отправлено
-    //       console.log("Письмо успешно отправлено!");
-    //       // Здесь можно добавить дополнительные действия при успешной отправке
-    //     } else {
-    //       // Произошла ошибка при отправке
-    //       console.error("Ошибка отправки письма:", xhr.status);
-    //       // Здесь можно добавить обработку ошибок при отправке
-    //     }
-    //   }
-    // };
-    // xhr.send(formData);
+    async function loadDataEnter(parameters = null, url, method) {
+        let params;
+        if (parameters) {
+            params = new URLSearchParams();
+            params.set('course', parameters.course)
+            params.set('name', parameters.name)
+            params.set('kidName', parameters.kidName)
+            params.set('tel', parameters.tel)
+        }
+        const res = await fetch(url, {
+            method: method,
+            body: params
+        });
+        
+        const json = await res.json();
+        return json;
+    }
+
+    const result = loadDataEnter(params, '../php/sender.php', 'POST');
+    console.log(result);
+
+    alert("все гуд");
+
+    setTimeout("location.replace('index.html')", 1500);
 }
