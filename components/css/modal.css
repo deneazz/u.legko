@@ -9,7 +9,7 @@
     z-index: 4;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: white;
     border: 1px solid var(--gray);
     border-radius: 15px;
@@ -22,12 +22,14 @@
     justify-content: flex-end;
 }
 
-.input-control{
+.input-control {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
-.modal input, .modal select {
+
+.modal input,
+.modal select {
     padding: 0.7rem 1rem;
     border: 1px solid var(--gray);
     border-radius: 5px;
@@ -40,18 +42,22 @@
     margin: 0.4rem 0 0.6rem;
 }
 
-.modal form{
+.modal form {
     display: flex;
     flex-direction: column;
 }
-.modal label{
+
+.modal label {
     font-size: 1.05rem;
     margin-bottom: 6px;
 }
-.modal input:focus, .modal select:focus{
+
+.modal input:focus,
+.modal select:focus {
     outline: 2px solid var(--main-lean);
 }
-.error{
+
+.error {
     color: var(--red);
     font-size: 0.9rem;
     margin-top: 3px;
@@ -67,19 +73,22 @@
     cursor: pointer;
     transition: var(--transition);
 }
-.btn-close:hover{
+
+.btn-close:hover {
     background-color: var(--red);
-    color:#fff;
+    color: #fff;
 }
-.btn-send{
+
+.btn-send {
     background-color: var(--blue);
     font-size: 1.05rem;
-    color:#fff;
+    color: #fff;
     border-radius: 5px;
     transition: var(--transition);
     margin-top: 0.6rem;
 }
-.btn-send:hover{
+
+.btn-send:hover {
     filter: brightness(0.8);
 }
 
@@ -99,22 +108,13 @@
 
 /* далее стили для модалки "акции" */
 
-.header-btn-cont-sales{
-    position: relative;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    line-height: 24px;
-}
-.modal-sales{
-    display: none;
-    opacity: 0;
+.modal-sales {
     position: absolute;
     bottom: -280%;
     left: -90%;
     width: 260px;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     background-color: #fff;
     z-index: 1;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -122,14 +122,99 @@
     cursor: auto;
 }
 
-.hidden-modal{
+.hidden-modal {
     display: none;
 }
-.vis-modal-opacity{
+
+.vis-modal-opacity {
+
     display: block;
-    opacity: 1;
+    -webkit-animation: fadeIn var(--transition) ease-out;
+    -moz-animation: fadeIn var(--transition) ease-out;
+    -o-animation: fadeIn var(--transition) ease-out;
+    animation: fadeIn var(--transition) ease-out;
 }
-.hidden-modal-opacity{
+
+.hidden-modal-opacity {
     display: none;
     opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:940px) {
+
+    .modal-sales {
+        width: auto;
+        left: auto;
+        position: relative;
+        border-radius: 0;
+    }
 }
