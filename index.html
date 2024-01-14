@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="/////">
     <meta name="description" content="/////">
+    <meta name="keywords" content="/////">
     <meta property="og:title" content="/////">
     <meta name="twitter:title" content="/////">
     <meta property="og:description" content="/////">
@@ -136,7 +137,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="header-sticky-cont2">
+                        <input id="menu__toggle" type="checkbox" hidden />
+                        <label class="menu__btn" for="menu__toggle">
+                            <span></span>
+                        </label> 
+                        <div class="header-sticky-cont2 menu__box">
                             <div class="header-btn-cont">
                                 <a href="#about-us" class="header-btn focus">О Нас</a>
                             </div>
@@ -153,14 +158,18 @@
                                 <a href="#contacts" class="header-btn focus">Контакты</a>
                             </div>
                             <div class="header-btn-cont header-btn-cont-sales">
-                                <a class="header-btn header-btn-sales focus" id="sales-btn">Акции  
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="btn-more-more">
-                                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z">
+                                <a class="header-btn header-btn-sales focus" id="sales-btn">Акции
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        class="btn-more-more">
+                                        <path
+                                            d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z">
                                         </path>
                                     </svg>
                                 </a>
                                 <div class="modal-sales hidden-modal-opacity">
-                                    <p>При оплате абонемента на следующий месяц до 25 числа текущего месяца - скидка <span class="imp">10%</span>.</p>                                
+                                    <p>При оплате абонемента на следующий месяц до 25 числа текущего месяца - скидка
+                                        <span class="imp">10%</span>.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +234,26 @@
                                         учиться.
                                         Задача взрослых – помочь ему стать успешным.
                                     </p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="about-svg"><g stroke-width="10" stroke="#ff8600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="28 23" transform="matrix(0.656059028990507,-0.7547095802227722,0.7547095802227722,0.656059028990507,-62.30744368531168,669.460220492906)"><path d="M208 205.22950744628906Q224 641.2295074462891 592 589.2295074462891 " marker-end="url(#SvgjsMarker3233)"></path></g><defs><marker markerWidth="6" markerHeight="6" refX="3" refY="3" viewBox="0 0 6 6" orient="auto" id="SvgjsMarker3233"><polyline points="0,3 3,1.5 0,0" fill="none" stroke-width="1" stroke="#ff8600" stroke-linecap="round" transform="matrix(1,0,0,1,1,1.5)" stroke-linejoin="round"></polyline></marker></defs></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"
+                                        viewBox="0 0 800 800" class="about-svg">
+                                        <g stroke-width="10" stroke="#ff8600" fill="none" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-dasharray="28 23"
+                                            transform="matrix(0.656059028990507,-0.7547095802227722,0.7547095802227722,0.656059028990507,-62.30744368531168,669.460220492906)">
+                                            <path
+                                                d="M208 205.22950744628906Q224 641.2295074462891 592 589.2295074462891 "
+                                                marker-end="url(#SvgjsMarker3233)"></path>
+                                        </g>
+                                        <defs>
+                                            <marker markerWidth="6" markerHeight="6" refX="3" refY="3" viewBox="0 0 6 6"
+                                                orient="auto" id="SvgjsMarker3233">
+                                                <polyline points="0,3 3,1.5 0,0" fill="none" stroke-width="1"
+                                                    stroke="#ff8600" stroke-linecap="round"
+                                                    transform="matrix(1,0,0,1,1,1.5)" stroke-linejoin="round">
+                                                </polyline>
+                                            </marker>
+                                        </defs>
+                                    </svg>
                                 </div>
 
                                 <div class="about-dirs">
@@ -239,7 +267,7 @@
                                         <li>Решение задач (1-2 классы)</li>
                                     </ul>
                                 </div>
-                                
+
                             </div>
                             <a name="directions" class="anchor"></a>
                         </div>
@@ -288,13 +316,33 @@
                                 <div id="preschoolers" class="courses-cards-cont s1">
                                     <div class="courses-card">
                                         <div class="courses-card-content1">
-                                            <img src="components/img/courses/preschoolers/2.png" alt=""
-                                                class="courses-img">
+                                            <img src="components/img/courses/preschoolers/2.png" alt="" class="courses-img">
                                         </div>
                                         <div class="courses-card-content2">
                                             <div class="courses-card-title">
                                                 <h1 class="bold">Подготовка к школе</h1>
                                                 <p class="semibold">для детей 5-6 лет (2 годa до школы)</p>
+                                                <!-- <?xml version="1.0" encoding="utf-8"?>
+                                                <svg height="64" width="64" version="1.1" class="courses-title-svg"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+                                                    xml:space="preserve">
+                                                    <g>
+                                                        <path class="courses-title-svg"
+                                                            d="M455.209,199.201c-26.516,0-37.773,21.462-47.26,13.648c-8.138-6.702-7.665-10.03-5.054-26.726l10.766-82.518
+		                                                    c3.74-17.94-10.556-28.803-22.767-28.444c0,0-77.78,2.68-89.202,2.68c-11.424,0-18.291,6.85-13.718,15.996
+		                                                    c4.581,9.137,23.669,22.881,25.132,43.388c2.286,31.983-25.132,59.402-57.106,59.402c-31.973,0-59.392-27.418-57.106-59.402
+		                                                    c1.463-20.507,20.55-34.251,25.132-43.388c4.572-9.145-2.296-15.996-13.718-15.996c-11.424,0-89.203-2.68-89.203-2.68
+		                                                    c-12.211-0.36-26.507,10.503-22.767,28.444l10.766,82.518c2.611,16.705,3.084,20.034-5.054,26.726
+		                                                    c-9.488,7.814-20.744-13.648-47.26-13.648C25.438,199.201,0,224.639,0,256c0,31.36,25.438,56.8,56.79,56.8
+		                                                    c26.517,0,37.773-21.462,47.26-13.648c8.138,6.702,7.665,10.03,5.054,26.727l-10.766,82.518
+		                                                    c-3.74,17.94,10.556,28.802,22.767,28.443c0,0,77.78-2.68,89.203-2.68c11.422,0,18.29-6.851,13.718-15.996
+		                                                    c-4.582-9.137-23.67-22.881-25.132-43.389c-2.287-31.982,25.132-59.4,57.106-59.4c31.974,0,59.392,27.418,57.106,59.4
+		                                                    c-1.463,20.508-20.551,34.252-25.132,43.389c-4.573,9.145,2.295,15.996,13.718,15.996c11.422,0,89.202,2.68,89.202,2.68
+		                                                    c12.211,0.359,26.508-10.503,22.767-28.443l-10.766-82.518c-2.61-16.705-3.084-20.034,5.054-26.727
+		                                                    c9.487-7.814,20.744,13.648,47.26,13.648C486.561,312.8,512,287.36,512,256C512,224.639,486.561,199.201,455.209,199.201z" />
+                                                    </g>
+                                                </svg> -->
                                             </div>
                                             <div class="courses-card-text">
                                                 <p>Пройдя эту первую ступеньку подготовки к школе, ребёнок будет знать
@@ -449,7 +497,8 @@
                                             <div class="courses-btns">
                                                 <button class="courses-btn btn btn-modal focus">Записаться на бесплатную
                                                     диагностику</button>
-                                                <a href="#results" class="courses-btn btn focus">Посмотреть
+                                                <a href="#results"
+                                                    class="courses-btn btn secondary-btn focus">Посмотреть
                                                     результаты</a>
                                             </div>
                                         </div>
@@ -660,6 +709,7 @@
                     <div class="cont">
                         <div class="review-cont">
                             <div class="slider-containter">
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 66" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-cont-svg"><path d="M41 3h20a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H41a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM4 42h20a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V44a2 2 0 0 1 2-2zm49.728-3.008 14 24C68.505 64.326 67.544 66 66 66H38c-1.544 0-2.505-1.674-1.728-3.008l14-24c.772-1.323 2.684-1.323 3.456 0zM15 0c8.284 0 15 6.716 15 15s-6.716 15-15 15S0 23.284 0 15 6.716 0 15 0z" fill="rgba(255, 134, 0, 1)"></path></svg> -->
                                 <h1 class="bold slider-title title">Отзывы</h1>
                                 <div class="slider" dir="ltr">
                                     <button class="slider-arrow slider-arrow--prev focus"
@@ -673,24 +723,45 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset1">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
-  
+
                                         <figure>
                                             <img src="components/img/reviews/prepare1/prepare1-review-1.jpeg" alt=""
                                                 class="slider-img">
@@ -699,22 +770,44 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud" transform="matrix(1,0,0,1,0,550)"><path d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"
+                                                    transform="matrix(1,0,0,1,0,550)">
+                                                    <path
+                                                        d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/prepare1/prepare1-review-2.jpeg" alt=""
@@ -724,22 +817,43 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset1">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/prepare2/prepare2-review-1.jpeg" alt=""
@@ -749,22 +863,44 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud" transform="matrix(1,0,0,1,0,550)"><path d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"
+                                                    transform="matrix(1,0,0,1,0,550)">
+                                                    <path
+                                                        d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/prepare2/prepare2-review-2.jpeg" alt=""
@@ -774,22 +910,43 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset1">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/rus/rus-review-1.jpeg" alt=""
@@ -799,22 +956,44 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud" transform="matrix(1,0,0,1,0,550)"><path d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"
+                                                    transform="matrix(1,0,0,1,0,550)">
+                                                    <path
+                                                        d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/rus/rus-review-2.jpeg" alt=""
@@ -824,22 +1003,43 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset1">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/rus/rus-review-3.jpeg" alt=""
@@ -849,22 +1049,44 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud" transform="matrix(1,0,0,1,0,550)"><path d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"
+                                                    transform="matrix(1,0,0,1,0,550)">
+                                                    <path
+                                                        d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/table/table-review-1.jpeg" alt=""
@@ -874,22 +1096,43 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset1">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 833.6820875251617 202.92888378731823 A  22 22 0 1 1 589.1213653845099 -30.962360787319867 A  22 22 0 1 1 718.6192544035644 -43.305427262945045 A  22 22 0 1 1 891.0041820070696 -55.439339245188094 A  22 22 0 1 1 833.6820875251617 202.92888378731823 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/table/table-review-2.jpeg" alt=""
@@ -899,22 +1142,44 @@
                                     <div class="slider-slide">
                                         <div class="slider-svg-preset2">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
-                                            <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)" fill-rule="evenodd"
-                                                d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
-                                                clip-rule="evenodd"></path>
-                                            <defs>
-                                                <linearGradient id="SvgjsLinearGradient1590">
-                                                    <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)" offset="0">
-                                                    </stop>
-                                                    <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)" offset="1">
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg2"><g fill="none" stroke-width="77" stroke="#ff8600" id="cloud" transform="matrix(1,0,0,1,0,550)"><path d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800" class="slider-svg1"><g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud"><path d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" class="slider-svg3">
+                                                <path fill="url(&quot;#SvgjsLinearGradient1590&quot;)"
+                                                    fill-rule="evenodd"
+                                                    d="M3 5a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zM3 19a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm7 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                                                    clip-rule="evenodd"></path>
+                                                <defs>
+                                                    <linearGradient id="SvgjsLinearGradient1590">
+                                                        <stop stop-opacity=" 1" stop-color="rgba(237, 115, 8)"
+                                                            offset="0">
+                                                        </stop>
+                                                        <stop stop-opacity=" 1" stop-color="rgba(255, 179, 0)"
+                                                            offset="1">
+                                                        </stop>
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg2">
+                                                <g fill="none" stroke-width="77" stroke="#ff8600" id="cloud"
+                                                    transform="matrix(1,0,0,1,0,550)">
+                                                    <path
+                                                        d="M 589.9582908092673 274.0585816240167 A  22 22 0 1 1 832.8453231203662 10.878644399671657 A  22 22 0 1 1 1000.0000161316277 7.949802628579704 A  22 22 0 1 1 1094.9791070394667 12.552293187146546 A  22 22 0 1 1 589.9582908092673 274.0585816240167 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"
+                                                class="slider-svg1">
+                                                <g fill="#ff8600" stroke-width="77" stroke="#ff8600" id="cloud">
+                                                    <path
+                                                        d="M 332.6359600032058 -30.33473144780436 A  22 22 0 1 1 -38.49371903665809 326.7782275907999 A  22 22 0 1 1 -192.46861929499613 256.90377726569227 A  22 22 0 1 1 -61.92468574999327 214.43514176116656 A  22 22 0 1 1 332.6359600032058 -30.33473144780436 Z"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </g>
+                                            </svg>
                                         </div>
                                         <figure>
                                             <img src="components/img/reviews/table/table-review-3.jpeg" alt=""
@@ -962,7 +1227,7 @@
                                 <div class="contact-map">
                                     <iframe
                                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A1b97c5689a78b9ff6c717ea32294f53e0c2dd1a5e583e63debb138558bfac737&amp;source=constructor"
-                                        width="600" height="500" frameborder="0"></iframe>
+                                        frameborder="0" class="ya-map"></iframe>
                                 </div>
                                 <div class="contact-info">
                                     <div class="contact-info-cart">
@@ -970,7 +1235,7 @@
                                     </div>
                                     <div class="contact-info-cart">
                                         <div class="contact-info-title">
-                                            <h1>Адрес</h1>
+                                            <h1 class="semibold">Адрес</h1>
                                         </div>
                                         <div class="contact-info-content">
                                             <p>Новочеркасск, пер. Кривопустенко, 14, офис 14</p>
@@ -979,7 +1244,7 @@
 
                                     <div class="contact-info-cart">
                                         <div class="contact-info-title">
-                                            <h1>График работы</h1>
+                                            <h1 class="semibold">График работы</h1>
                                         </div>
                                         <div class="contact-info-content">
                                             <p>Пн-Вс: 10:00 - 20:00</p>
@@ -988,7 +1253,7 @@
 
                                     <div class="contact-info-cart">
                                         <div class="contact-info-title">
-                                            <h1>Телефон</h1>
+                                            <h1 class="semibold">Телефон</h1>
                                         </div>
                                         <div class="contact-info-content">
                                             <p class="phone-number phone-number-transperent"><a href="tel:+79524150721"
@@ -999,7 +1264,7 @@
 
                                     <div class="contact-info-cart">
                                         <div class="contact-info-title">
-                                            <h1>Наши Соцсети</h1>
+                                            <h1 class="semibold">Наши Соцсети</h1>
                                         </div>
                                         <div class="contact-btns-cont contact-info-content">
                                             <div class="contact-btn-cont">
@@ -1066,6 +1331,7 @@
                         <div class="footer-card footer-card-logo">
                             <img src="components/img/logo/лого УЧИМСЯ.png" alt="Учимся легко!">
                             <p class="bold">Учимся легко! − Детская развивающая студия</p>
+                            <a href="https://api.whatsapp.com/send?phone=89524150721" target="_blank" class="politic">Написать нам</a>
                             <a href="#" class="politic">Политика конфиденциальности</a>
                             <p class="politic">2024</p>
                         </div>
@@ -1076,7 +1342,7 @@
                                 <li class="flex"><a href="#reviews" class="focus">Отзывы</a></li>
                                 <li class="flex"><a href="#results" class="focus">Результаты</a></li>
                                 <li class="flex"><a href="#contacts" class="focus">Контакты</a></li>
-                                <li class="flex"><a href="#sales" class="focus">Акции</a></li>
+                                <!-- <li class="flex"><a href="#sales" class="focus">Акции</a></li> -->
                             </ul>
                         </div>
                         <div class="footer-card footer-card-qrs">
