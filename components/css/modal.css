@@ -83,7 +83,7 @@
     background-color: var(--blue);
     font-size: 1.05rem;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: var(--transition);
     margin-top: 0.6rem;
 }
@@ -120,6 +120,7 @@
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     transition: opacity var(--transition) ease-in-out;
     cursor: auto;
+    white-space: wrap;
 }
 
 .hidden-modal {
@@ -216,5 +217,17 @@
         left: auto;
         position: relative;
         border-radius: 0;
+    }
+}
+@media screen and (max-width:600px) {
+
+    .modal{
+        width: calc(90% - 2.6rem);
+    }
+    .modal p{
+        font-size: 0.9rem;
+    }
+    .modal label{
+        font-size: 1rem;
     }
 }

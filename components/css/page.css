@@ -469,6 +469,7 @@ input[name="r"] {
 .courses-card-content2 li {
     margin-top: 4px;
     margin-left: 16px;
+    color: var(--black-warm)
 }
 
 .courses-btns {
@@ -777,10 +778,6 @@ input[name="r"] {
     border-radius: 25px;
 }
 
-.contact-btns-cont {
-    display: flex;
-}
-
 .contact-btn-cont {
     display: flex;
     align-items: center;
@@ -807,6 +804,15 @@ input[name="r"] {
     justify-content: center;
 }
 
+.contact-info-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-btns-cont {
+    flex-direction: row;
+}
+
 .contact-info-cart {
     margin-bottom: 24px;
 }
@@ -824,8 +830,11 @@ input[name="r"] {
     font-size: 18px;
 }
 
-.contact-info-content a {
+.contact-info-content .phone-number > a {
     color: inherit;
+}
+.contact-info-content > #or ~ a {
+    color: #fff;
 }
 
 .contact-btn {
@@ -1008,7 +1017,7 @@ footer {
         visibility: hidden;
         top: 0;
         right: -100%;
-        width: 60vw;
+        width: 30vw;
         height: 100vh;
         margin: 0;
         padding: 80px 0;
@@ -1025,6 +1034,7 @@ footer {
     .header-btn-cont-sales{
         align-items: center;
     }
+}
 
 @media screen and (max-width:700px) {
 
@@ -1060,12 +1070,29 @@ footer {
     #visual{
         margin-bottom: -20px;
     }
-}
+
+    .menu__box{
+        width: 40vw;
+    }
 }
 
 @media screen and (max-width:600px) {
+    .btn{
+        font-size: 0.9rem;
+        padding: 9px 12px;
+    }
     .slider {
         width: 90%;
+    }
+
+    .courses-card-title{
+        margin-bottom: 8px;
+    }
+    .courses-card-title > h1{
+        font-size: 1.2rem;
+    }
+    .courses-card-title>p{
+        font-size: 1rem;
     }
 
     .slider-slide {
@@ -1081,13 +1108,66 @@ footer {
     }
     .contact-content{
         padding: 10px;
+        border-radius: 15px;
     }
 
     .courses-card-content1 {
-        height: 200px;
+        display: none;
+    }
+    .courses-btns{
+        gap: 0;
+    }
+    .courses-card-content2 li{
+        font-size: 0.9rem;
     }
 
     #header-cont > p{
         font-size: 0.9rem;
+    }
+
+    .menu__box{
+        width: 50vw;
+    }
+
+    .title{
+        font-size: 1.5rem;
+    }
+    .about-title h2{
+        font-size: 1.1rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    .about-dirs{
+        padding: 1rem 1.4rem;
+    }
+    .about-dirs h1{
+        font-size: 1rem;
+    }
+    .about-dirs li{
+        font-size: 0.9rem;
+    }
+    .courses-menu-option{
+        font-size: 1.4rem;
+        margin: auto 5px;
+    }
+    #visual{
+        margin-bottom: -10px;
+    }
+    .results{
+        gap: 16px;
+    }
+    .contact-info-cart{
+        margin-bottom: 12px;
+    }
+    .contact-info-title>h1{
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+    .contact-info-content>p{
+        font-size: 0.9rem;
+    }
+    .footer-card-navbar li a{
+        padding-left: 0;
     }
 }
