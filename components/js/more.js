@@ -11,11 +11,13 @@ for (let i = 0; i < more.length; i++) {
                 openContent[i].classList.toggle("hidden");
                 moreBtns[i].style.transform = "rotate(180deg)";
                 moreText[i].innerHTML = "Скрыть";
+                setCoursesHeightToSchoolers()
             }
             else{ // открыто
                 openContent[i].classList.toggle("hidden");
                 moreBtns[i].style.transform = "rotate(0deg)";
                 moreText[i].innerHTML = "Подробнее";
+                setCoursesHeightToSchoolers()
             }
         }
         else {
@@ -23,13 +25,13 @@ for (let i = 0; i < more.length; i++) {
                 openContent[i].classList.toggle("hidden");
                 moreBtns[i].style.transform = "rotate(180deg)";
                 moreText[i].innerHTML = "Скрыть";
-                setCoursesHeight();
+                setCoursesHeightToPreschoolers()
             }
             else{ // открыто
                 openContent[i].classList.toggle("hidden");
                 moreBtns[i].style.transform = "rotate(0deg)";
                 moreText[i].innerHTML = "Подробнее";
-                setCoursesHeight();
+                setCoursesHeightToPreschoolers()
             }
         }
     });

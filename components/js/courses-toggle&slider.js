@@ -13,7 +13,7 @@ function checkChecked() {
     if (inp1.checked) {
         und1.classList.add("vis");
         und2.classList.remove("vis");
-        setCoursesHeight();
+        setCoursesHeightToPreschoolers();
 
         label1.classList.add("black");
         label2.classList.remove("black");
@@ -21,19 +21,31 @@ function checkChecked() {
     else {
         und1.classList.remove("vis");
         und2.classList.add("vis");
-        document.querySelector(".courses-cards").style.height = "100%";
+        setCoursesHeightToSchoolers();
 
         label1.classList.remove("black");
         label2.classList.add("black");
     }
 }
 // изменяет размер .courses-cards при изменении размера окна
-window.addEventListener('resize', setCoursesHeight);
+window.addEventListener('resize', ()=>{
+    if (inp1.checked){
+        setCoursesHeightToPreschoolers();
+    }
+    else{
+        setCoursesHeightToSchoolers();
+    }
+});
 
-function setCoursesHeight(){
-    opt1Height = document.querySelector("#preschoolers").clientHeight
+function setCoursesHeightToPreschoolers(){
+    opt1Height = document.querySelector("#preschoolers").clientHeight;
     document.querySelector(".courses-cards").style.height = opt1Height + 'px';
 }
+function setCoursesHeightToSchoolers(){
+    opt1Height = document.querySelector("#schoolers").clientHeight;
+    document.querySelector(".courses-cards").style.height = opt1Height + 'px';
+}
+
 
 const slider = document.querySelector(".slider");
 const slide = document.querySelector(".slider-slide");
