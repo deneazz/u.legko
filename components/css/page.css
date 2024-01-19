@@ -152,16 +152,13 @@
 .header-btn-icon,
 .contact-btn-icon {
     display: flex;
-    padding: 6px;
     margin-left: 6px;
-    border-radius: 10px;
-    background-color: var(--main-orange);
-    transition: background-color var(--transition);
+    transition: filter var(--transition);
 }
 
 .header-btn-icon:hover,
 .contact-btn-icon:hover {
-    background-color: var(--main-lean);
+    filter: brightness(0.8);
 }
 
 
@@ -406,20 +403,6 @@ input[name="r"] {
     transition: all 0.6s ease;
 }
 
-.courses-card-title {
-    position: relative;
-}
-.courses-card-title > h1{
-    white-space: nowrap;
-}
-
-/* .courses-title-svg{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    fill: #fff;
-} */
-
 #r1:checked~.s1 {
     margin-left: 0;
 }
@@ -459,11 +442,20 @@ input[name="r"] {
     height: fit-content;
 }
 
-.courses-img {
+.courses-img, .courses-img-mobile{
     height: 100%;
     border-radius: 10px;
     pointer-events: none;
     user-select: none;
+}
+
+.courses-card-img-mobile-cont{
+    box-sizing: border-box;
+    height: auto;
+    user-select: none;
+}
+.courses-img-mobile{
+    display: none;
 }
 
 .courses-card-content2 li {
@@ -505,6 +497,18 @@ input[name="r"] {
     transform: scale(0.95);
 }
 
+.courses-card-title-mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+.courses-card:nth-child(2n) .courses-card-title-mobile{
+    flex-direction: row-reverse;
+}
+
 .courses-card-title {
     font-size: 1rem;
     margin-bottom: 12px;
@@ -512,6 +516,12 @@ input[name="r"] {
     background: linear-gradient(45deg, var(--light-orange) 0%, var(--main-yellow) 100%);
     padding: 0.7rem 1rem;
     border-radius: 10px;
+    height: fit-content;
+    flex-grow: 1;
+    align-self: center;
+}
+.courses-card-title > h1{
+    white-space: nowrap;
 }
 
 .courses-card-title>p {
@@ -665,10 +675,6 @@ input[name="r"] {
     background: var(--main-lean);
 }
 
-/* .slider::-webkit-scrollbar-track-piece:start {
-    background: var(--main-lean);
-} */
-
 .slider-slide {
     height: 100%;
     flex: 1 0 31%;
@@ -811,6 +817,7 @@ input[name="r"] {
 
 .contact-btns-cont {
     flex-direction: row;
+    align-items: center;
 }
 
 .contact-info-cart {
@@ -888,13 +895,9 @@ footer {
     color: #000;
 }
 
-.footer-card-qrs .flex {
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    gap: 16px;
+.footer-card-navbar{
+    flex: 0 0 200px;
 }
-
-
 .footer-card-navbar ul {
     list-style-type: none;
 }
@@ -909,11 +912,17 @@ footer {
     color: #000;
 }
 
+.footer-card-qrs > div{
+    box-sizing: border-box;
+    display: inline-block;
+}
+
 .footer-card-qrs img {
     aspect-ratio: 1;
     width: clamp(100px, calc(50% - 8px), 130px);
     border-radius: 10px;
     cursor: pointer;
+    margin: 0 10px 10px 0;
 }
 
 .politic {
@@ -1050,8 +1059,12 @@ footer {
         padding: 14px 10px;
     }
 
+    .slider{
+        width: 90%;
+    }
     .slider-slide {
         flex: 1 0 45%;
+        scroll-snap-align: start;
     }
     
     .contact-map{
@@ -1081,9 +1094,6 @@ footer {
         font-size: 0.9rem;
         padding: 9px 12px;
     }
-    .slider {
-        width: 90%;
-    }
 
     .courses-card-title{
         margin-bottom: 8px;
@@ -1095,8 +1105,15 @@ footer {
         font-size: 1rem;
     }
 
+    .courses-img-mobile{
+        display: block;
+        width: 100%;
+        max-height: 150px;
+    }
+
     .slider-slide {
-        flex: 1 0 90%;
+        flex: 1 0 92%;
+        scroll-snap-align: center;
     }
     .slider-arrow{
         width: auto;
@@ -1126,7 +1143,7 @@ footer {
     }
 
     .menu__box{
-        width: 50vw;
+        width: 40vw;
     }
 
     .title{
@@ -1169,5 +1186,20 @@ footer {
     }
     .footer-card-navbar li a{
         padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .menu__box{
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .menu__box{
+        width: 60vw;
+    }
+    .footer-card-logo img{
+        width: 200px;
     }
 }
