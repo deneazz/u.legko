@@ -3,8 +3,6 @@
     height: 100%;
     position: relative;
     margin: 0 auto;
-
-    /* background-color: rgb(255, 119, 0); */
 }
 
 .cont {
@@ -34,7 +32,6 @@
     height: 58px;
     font-size: 20px;
     background-color: #fff;
-    /* background-color: orange; */
 }
 
 #header-cont {
@@ -47,7 +44,6 @@
 }
 
 .phone-number {
-    /* background-color: orangered; */
     display: flex;
     align-items: center;
     background-color: var(--main-orange);
@@ -74,7 +70,6 @@
 }
 
 #schedule {
-    /* background-color: orangered; */
     display: flex;
     align-items: center;
 }
@@ -86,8 +81,6 @@
     z-index: 2;
     background-color: #fff;
     border-bottom: 1px solid var(--lightgray);
-
-    /* background-color: orange; */
 }
 
 #header-sticky-cont {
@@ -96,8 +89,6 @@
     padding: 14px 0;
     display: flex;
     justify-content: space-between;
-
-    /* background-color: orangered; */
 }
 
 .header-sticky-cont2 {
@@ -161,15 +152,12 @@
     filter: brightness(0.8);
 }
 
-
 #header-btn-icon-first {
     margin-left: 24px;
 }
 
 #cover {
     width: 100%;
-
-    /* background-color: rgb(255, 0, 247); */
 }
 
 .container-cover {
@@ -194,39 +182,9 @@
     user-select: none;
 }
 
-/* стили для удаленной обложки 
-
-.cover-content{
-    background-color: orangered;
-}
-#cover-main-text{
-    font-size: 40px;
-
-    background-color: brown;
-}
-#cover-side-text{
-    font-size: 18px;
-    font-weight: 300;
-    margin-top: 12px;
-
-    background-color: brown;
-}
-#cover-btn{
-    margin-top: 24px;
-    background-color: #ef7f1a;
-    transition: .2s;
-}
-#cover-btn:hover{
-    background-color: #cf6e19;
-} */
-
-
 #about {
     width: 100%;
     margin-top: -10px;
-    /* height: 690px; */
-
-    /* background-color: rgb(0, 179, 255); */
 }
 
 .about-cont {
@@ -254,7 +212,6 @@
     margin-bottom: 24px;
     font-weight: normal;
 }
-
 
 .about-content {
     font-size: 16px;
@@ -308,13 +265,10 @@
 
 #courses {
     width: 100%;
-    /* 
-    background-color: rgb(0, 255, 76); */
 }
 
 .courses-header-cont {
     background: var(--orange);
-    /* background: linear-gradient(45deg, var(--main-orange) 0%, var(--orange) 100%); */
 }
 
 #visual {
@@ -379,13 +333,9 @@
     opacity: 1;
 }
 
-/* .courses-menu-option:hover .underline {
-    opacity: 1;
-} */
 .courses-menu-option:hover {
     color: #000;
 }
-
 
 input[name="r"] {
     position: absolute;
@@ -442,7 +392,8 @@ input[name="r"] {
     height: fit-content;
 }
 
-.courses-img, .courses-img-mobile{
+.courses-img, 
+.courses-img-mobile{
     height: 100%;
     border-radius: 10px;
     pointer-events: none;
@@ -473,7 +424,6 @@ input[name="r"] {
 .courses-btn {
     width: fit-content;
     background: var(--main-orange);
-    /* background: linear-gradient(45deg, var(--main-orange) 0%, var(--orange) 100%); */
     color: #fff;
     margin-top: 6px;
     transition: background-color var(--transition), transform var(--transition);
@@ -820,29 +770,20 @@ input[name="r"] {
     align-items: center;
 }
 
-.contact-info-cart {
-    margin-bottom: 24px;
-}
+.contact-info-cart {margin-bottom: 24px;}
 
-.contact-info-cart:last-child {
-    margin-bottom: 0;
-}
+.contact-info-cart:last-child {margin-bottom: 0;}
 
 .contact-info-title>h1 {
     font-size: 20px;
     margin-bottom: 8px;
 }
 
-.contact-info-content>p {
-    font-size: 18px;
-}
+.contact-info-content > p {font-size: 18px;}
 
-.contact-info-content .phone-number > a {
-    color: inherit;
-}
-.contact-info-content > #or ~ a {
-    color: #fff;
-}
+.contact-info-content .phone-number > a {color: inherit;}
+
+.contact-info-content > #or ~ a {color: #fff;}
 
 .contact-btn {
     width: fit-content;
@@ -851,18 +792,12 @@ input[name="r"] {
     transition: filter var(--transition), transform var(--transition);
 }
 
-.contact-btn:hover {
-    filter: brightness(0.8);
-}
+.contact-btn:hover {filter: brightness(0.8);}
 
-#or {
-    margin: 6px 0 6px 4px;
-}
+#or {margin: 6px 0 6px 4px;}
 
 
-footer {
-    background-color: var(--white-warm);
-}
+footer {background-color: var(--white-warm);}
 
 .footer-cont {
     width: 100%;
@@ -878,29 +813,21 @@ footer {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* background-color: brown; */
     flex: 1 0 200px;
 }
 
-.footer-card-logo img {
-    width: clamp(100px, 100%, 250px);
-}
+.footer-card-logo img {width: clamp(100px, 100%, 250px);}
 
 .footer-card-logo a {
     color: var(--black-muted);
     transition: color var(--transition);
 }
 
-.footer-card-logo a:hover {
-    color: #000;
-}
+.footer-card-logo a:hover {color: #000;}
 
-.footer-card-navbar{
-    flex: 0 0 200px;
-}
-.footer-card-navbar ul {
-    list-style-type: none;
-}
+.footer-card-navbar{flex: 0 0 200px;}
+
+.footer-card-navbar ul {list-style-type: none;}
 
 .footer-card-navbar li a {
     color: var(--black-muted);
@@ -908,9 +835,7 @@ footer {
     transition: color var(--transition);
 }
 
-.footer-card-navbar li a:hover {
-    color: #000;
-}
+.footer-card-navbar li a:hover {color: #000;}
 
 .footer-card-qrs > div{
     box-sizing: border-box;
@@ -919,105 +844,96 @@ footer {
 
 .footer-card-qrs img {
     aspect-ratio: 1;
-    width: clamp(100px, calc(50% - 8px), 130px);
+    width: clamp(100px, calc(50% - 16px), 130px);
     border-radius: 10px;
     cursor: pointer;
     margin: 0 10px 10px 0;
 }
+.footer-card-intermir img{width: 200px;}
 
-.politic {
-    margin-top: 4px;
-}
+.politic {margin-top: 4px;}
 
 
 
 
 @media screen and (max-width:1160px) {
-
     /* md */
     .container {
-        width: 940px;
+        width: 940px
     }
 }
 
 @media screen and (max-width:940px) {
-
     /* sm */
     .container {
-        width: 700px;
+        width: 700px
     }
 
     .courses-card-content1 {
-        height: 300px;
+        height: 300px
     }
 
     .about-content {
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
     .about-svg{
-        display: none;
+        display: none
     }
 
     .about-dirs {
-        margin: 24px 0 0 0;
+        margin: 24px 0 0 0
     }
 
     .results {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr)
     }
 
-    /* стилизуем кнопку */
     .menu__btn {
         display: flex;
-        /* используем flex для центрирования содержимого */
         align-items: center;
-        /* центрируем содержимое кнопки */
         width: 48px;
         height: 48px;
         cursor: pointer;
-        z-index: 3;
+        z-index: 3
     }
 
-    /* добавляем "гамбургер" */
     .menu__btn>span,
     .menu__btn>span::before,
-    .menu__btn>span::after {
+    .menu__btn>span::after{
         display: block;
         position: absolute;
         width: 36px;
         height: 3px;
         background-color: var(--black-warm);
-        transition: 0.3s;
+        transition: 0.3s
     }
-
-    .menu__btn>span::before {
+    .menu__btn>span::before{
         content: '';
-        top: -12px;
+        top: -12px
     }
-
     .menu__btn>span::after {
         content: '';
-        top: 12px;
+        top: 12px
     }
 
     #menu__toggle:checked ~ .menu__btn > span {
-        transform: rotate(45deg);
-      }
+        transform: rotate(45deg)
+    }
       
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
-        transform: rotate(0);
+        transform: rotate(0)
     }
       
     #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
-        transform: rotate(90deg);
+        transform: rotate(90deg)
     }
       
     #menu__toggle:checked ~ .menu__box {
         visibility: visible;
-        right: 0;
+        right: 0
     }
 
     .menu__box {
@@ -1034,172 +950,177 @@ footer {
         text-align: center;
         background-color: #fff;
         box-shadow: 0px 1px 6px rgba(0, 0, 0, .2);
-        transition: var(--transition);
+        transition: var(--transition)
     }
     .header-btn-cont{
         height: auto;
-        justify-content: center;
+        justify-content: center
     }
     .header-btn-cont-sales{
-        align-items: center;
+        align-items: center
     }
 }
 
 @media screen and (max-width:700px) {
-
     /* xs */
     .container {
-        width: 100%;
+        width: 100%
     }
 
     #header-cont {
-        padding: 20px 10px 10px;
+        padding: 20px 10px 10px
     }
     #header-sticky-cont{
-        padding: 14px 10px;
+        padding: 14px 10px
     }
 
     .slider{
-        width: 90%;
+        width: 90%
     }
     .slider-slide {
         flex: 1 0 45%;
-        scroll-snap-align: start;
+        scroll-snap-align: start
     }
     
     .contact-map{
         width: 100%;
-        justify-content: center;
+        justify-content: center
     }
     .ya-map{
         width: 100%;
         height: auto;
-        aspect-ratio: 1.2/1;
+        aspect-ratio: 1.2/1
     }
 
     .courses-card-content1 {
-        height: 250px;
+        height: 250px
     }
     #visual{
-        margin-bottom: -20px;
+        margin-bottom: -20px
     }
 
     .menu__box{
-        width: 40vw;
+        width: 40vw
     }
 }
 
 @media screen and (max-width:600px) {
     .btn{
         font-size: 0.9rem;
-        padding: 9px 12px;
+        padding: 9px 12px
     }
 
     .courses-card-title{
-        margin-bottom: 8px;
+        margin-bottom: 8px
     }
     .courses-card-title > h1{
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
     .courses-card-title>p{
-        font-size: 1rem;
+        font-size: 1rem
     }
 
     .courses-img-mobile{
         display: block;
         width: 100%;
-        max-height: 150px;
+        max-height: 150px
     }
 
     .slider-slide {
         flex: 1 0 92%;
-        scroll-snap-align: center;
+        scroll-snap-align: center
     }
     .slider-arrow{
         width: auto;
-        padding: 0;
+        padding: 0
     }
     .thick-arrow-right, .thick-arrow-left {
         width: 20px;
-        height: 20px;
+        height: 20px
     }
     .contact-content{
         padding: 10px;
-        border-radius: 15px;
+        border-radius: 15px
     }
 
     .courses-card-content1 {
-        display: none;
+        display: none
     }
     .courses-btns{
-        gap: 0;
+        gap: 0
     }
     .courses-card-content2 li{
-        font-size: 0.9rem;
+        font-size: 0.9rem
     }
 
     #header-cont > p{
-        font-size: 0.9rem;
+        font-size: 0.9rem
     }
 
     .menu__box{
-        width: 40vw;
+        width: 40vw
     }
 
     .title{
-        font-size: 1.5rem;
+        font-size: 1.5rem
     }
     .about-title h2{
-        font-size: 1.1rem;
+        font-size: 1.1rem
     }
     p{
-        font-size: 0.9rem;
+        font-size: 0.9rem
     }
     .about-dirs{
-        padding: 1rem 1.4rem;
+        padding: 1rem 1.4rem
     }
     .about-dirs h1{
-        font-size: 1rem;
+        font-size: 1rem
     }
     .about-dirs li{
-        font-size: 0.9rem;
+        font-size: 0.9rem
     }
     .courses-menu-option{
         font-size: 1.4rem;
-        margin: auto 5px;
+        margin: auto 5px
     }
     #visual{
-        margin-bottom: -10px;
+        margin-bottom: -10px
     }
     .results{
-        gap: 16px;
+        gap: 16px
     }
     .contact-info-cart{
-        margin-bottom: 12px;
+        margin-bottom: 12px
     }
     .contact-info-title>h1{
         font-size: 1rem;
-        margin-bottom: 6px;
+        margin-bottom: 6px
     }
     .contact-info-content>p{
-        font-size: 0.9rem;
+        font-size: 0.9rem
     }
     .footer-card-navbar li a{
         padding-left: 0;
+        font-size: 0.9rem
+    }
+
+    .politic{
+        font-size: 0.9rem
     }
 }
 
 @media screen and (max-width: 500px){
-    .menu__box{
-        width: 50vw;
-    }
+    .menu__box{ width: 50vw}
 }
 
 @media screen and (max-width: 400px){
-    .menu__box{
-        width: 60vw;
-    }
-    .footer-card-logo img{
-        width: 200px;
-    }
+    .cont{padding:24px 12px}
+    .courses-menu-option{font-size: 1.25rem;}
+    .courses-card-title{padding: .5rem .7rem}
+    .courses-card-title > h1{font-size: 1.1rem;}
+    .courses-card-title > p{font-size: 0.9rem;}
+    .menu__box{width: 60vw}
+    .footer-cont{gap: 24px}
+    .footer-card-logo img{width: 200px}
+    .footer-card-intermir img{width: 150px}
 }
