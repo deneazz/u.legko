@@ -46,12 +46,21 @@ function setCoursesHeightToSchoolers(){
     document.querySelector(".courses-cards").style.height = opt1Height + 'px';
 }
 
-
+// slider
 const slider = document.querySelector(".slider");
 const slide = document.querySelector(".slider-slide");
 
 function handlesliderMove(positive = true) {
   const slideWidth = slide.clientWidth;
   slider.scrollLeft = positive ? slider.scrollLeft + slideWidth : slider.scrollLeft - slideWidth;
+}
+
+// remove qrs
+const isMobile = /Mobile|webOS|BlackBerry|IEMobile|MeeGo|mini|Fennec|Windows Phone|Android|iP(ad|od|hone)/i.test(navigator.userAgent);
+if (isMobile){ 
+    document.querySelector(".footer-card-qrs").style.display="none";
+}
+else{
+    document.querySelector(".footer-card-qrs").style.display="flex";
 }
 
